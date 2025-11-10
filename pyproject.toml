@@ -1,0 +1,22 @@
+[project]
+name = "bookfinder"
+version = "0.1.0"
+description = "Book search engine to retrieve and rank similar books from a large metadata dataset."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "gensim>=4.4.0",
+    "gradio>=3.36.1",
+    "ipykernel>=7.1.0",
+    "jupyter>=1.1.1",
+    "langdetect>=1.0.9",
+    "matplotlib>=3.10.7",
+    "nltk>=3.9.2",
+    "opencv-python>=4.12.0.88",
+    "pandas>=2.3.3",
+    "pillow>=12.0.0",
+    "requests>=2.32.5",
+    "scikit-learn>=1.7.2",
+    "sentence-transformers>=5.1.2",
+    "streamlit>=1.51.0",
+]
