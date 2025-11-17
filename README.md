@@ -48,6 +48,7 @@ bookfinder/
 ├── build_index.py                # Build and save all embeddings/models
 ├── run_search.py                 # CLI search interface
 ├── app.py                        # Gradio web interface
+├── requirements.txt              # Project dependencies
 └── README.md                     # Project documentation
 ```
 
@@ -55,28 +56,49 @@ bookfinder/
 
 ## ⚡ Setup Instructions
 
-1. **Clone the repository:**
+### 1. **Clone the repository:**
 
 ```bash
 git clone https://github.com/mocode002/bookfinder-search-engine.git
 cd bookfinder
 ```
 
-2. **Install dependencies:**
+### 2. **Create and activate a virtual environment (Better to use uv)**
 
 ```bash
-Later
+python -m venv .venv
 ```
 
-3. **Prepare data:**
+#### **Activate it:**
+
+**macOS / Linux:**
+
+```bash
+source .venv/bin/activate
+```
+
+**Windows:**
+
+```bash
+.venv\Scripts\activate
+```
+
+
+### 3. **Install dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. **Prepare data:**
 
 * Place your dataset CSV (`book_data.csv`) inside `datasets/`.
 * The CSV should have at least `title`, `description`, `genres`, `image_url` columns.
 
-1. **Build models and embeddings (first run only):**
+### 5. **Build models and embeddings (first run only):**
 
 ```bash
-uv run build_index.py
+python build_index.py
 ```
 
 This will:
@@ -92,7 +114,7 @@ This will:
 ### 1. Command-line interface
 
 ```bash
-uv run run_search.py
+python run_search.py
 ```
 
 * Prompts are displayed in the terminal.
@@ -101,12 +123,16 @@ uv run run_search.py
 ### 2. Gradio web interface
 
 ```bash
-uv run app.py
+python app.py
 ```
 
 * Opens a local web page.
 * Allows typing a query, selecting search mode (TF-IDF / Word2Vec / Sentence Transformer), and choosing `top_k`.
 * Shows results with images, title, genres, description, and similarity.
+
+Screenshot:
+
+![Gradio App Screenshot](assets/screen.png)
 
 ---
 
