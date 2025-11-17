@@ -90,9 +90,18 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. **Prepare data:**
+### 4. **Prepare data**
 
-* Place your dataset CSV (`book_data.csv`) inside `datasets/`.
+Download the dataset **“Goodreads' Best Books Ever” by Naren** :
+
+🔗 [https://www.kaggle.com/datasets/meetnaren/goodreads-best-books](https://www.kaggle.com/datasets/meetnaren/goodreads-best-books)
+
+Then place the CSV file inside the `datasets/` folder and rename it to:
+
+```
+datasets/book_data.csv
+```
+
 * The CSV should have at least `title`, `description`, `genres`, `image_url` columns.
 
 ### 5. **Build models and embeddings (first run only):**
